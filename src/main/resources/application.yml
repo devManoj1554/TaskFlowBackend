@@ -16,7 +16,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: false
-    show-sql: true
+    show-sql: false
 
 taskflow:
   jwt:
@@ -25,7 +25,8 @@ taskflow:
     expiration-ms: 86400000  # 24h
 
 cors:
-  allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:5555}
+  # allowed-origins: ${CORS_ORIGINS:http://localhost:5173,http://localhost:5555}
+  allowed-origins: ${CORS_ORIGINS:https://taskflowprowebapp.netlify.app}
 
 logging:
   level:
